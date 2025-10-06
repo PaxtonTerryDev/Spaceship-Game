@@ -8,7 +8,11 @@
 [ext_resource type="Resource" uid="uid://brxi20mgjpoqr" path="res://resources/ship_parts/thrusters/defaults/default_starboard_thruster.tres" id="5_1gh00"]
 [ext_resource type="PackedScene" uid="uid://bk4tonkv4niju" path="res://scenes/cameras/ship_camera.tscn" id="7_038ag"]
 
-[node name="Ship" type="CharacterBody2D"]
+[node name="Ship" type="RigidBody2D"]
+mass = 100.0
+gravity_scale = 0.0
+linear_damp = 0.5
+angular_damp = 2.0
 script = ExtResource("1_3cxh5")
 ship_thrusters = Dictionary[int, Object]({
 0: ExtResource("2_blc30"),

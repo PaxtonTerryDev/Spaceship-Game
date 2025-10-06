@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("2_boxtv")
-force = 20.0
+force = 75.0
 position = 3
 display_name = "Default Starboard Thruster"
 manufacturer = ExtResource("1_t6skp")

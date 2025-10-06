@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("2_airkr")
-force = 20.0
+force = 75.0
 position = 2
 display_name = "Default Port Thruster"
 manufacturer = ExtResource("1_w8kkg")
