@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c054hp4irhql2"]
+
+[ext_resource type="Script" uid="uid://28q6b545dhj" path="res://source/ships/ship.gd" id="1_3cxh5"]
+
+[node name="Ship" type="CharacterBody2D"]
+script = ExtResource("1_3cxh5")
+metadata/_custom_type_script = "uid://28q6b545dhj"
+
+[node name="ShipSprite" type="Sprite2D" parent="."]
