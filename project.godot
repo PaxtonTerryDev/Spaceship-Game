@@ -12,3 +12,15 @@ config_version=5
 
 config/name="Spaceship Game"
 config/features=PackedStringArray("4.5", "Forward Plus")
+
+[physics]
+
+2d/run_on_separate_thread=true
+2d/default_gravity=0.0
+2d/default_gravity_vector=Vector2(0, 0)
+2d/default_linear_damp=0.0
+2d/default_angular_damp=0.0
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=3
