@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bk4tonkv4niju"]
+
+[ext_resource type="Script" uid="uid://c7aym2rtqgu4y" path="res://source/camera/ship_camera.gd" id="1_lhrji"]
+
+[node name="ShipCamera" type="Camera2D"]
+script = ExtResource("1_lhrji")
+metadata/_custom_type_script = "uid://c7aym2rtqgu4y"

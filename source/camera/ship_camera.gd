@@ -1,0 +1,1 @@
+class_name ShipCamera extends Camera2D
