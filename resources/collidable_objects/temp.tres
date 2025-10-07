@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="CollidableObject" load_steps=2 format=3 uid="uid://bw6w8wi4ssyxv"]
+
+[ext_resource type="Script" uid="uid://cfp4fn4a3qqye" path="res://source/objects/collidable_object.gd" id="1_pa0fa"]
+
+[resource]
+script = ExtResource("1_pa0fa")
+metadata/_custom_type_script = "uid://cfp4fn4a3qqye"

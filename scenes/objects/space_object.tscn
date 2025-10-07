@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://b57id7wr7n1jn"]
+
+[ext_resource type="Script" uid="uid://ce3fpj0afgde6" path="res://source/objects/space_object.gd" id="1_1hx25"]
+
+[node name="SpaceObject" type="RigidBody2D"]
+input_pickable = true
+gravity_scale = 0.0
+linear_damp_mode = 1
+angular_damp_mode = 1
+script = ExtResource("1_1hx25")
+metadata/_custom_type_script = "uid://ce3fpj0afgde6"

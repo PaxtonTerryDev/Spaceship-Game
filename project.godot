@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Spaceship Game"
-run/main_scene="uid://dpod7fximr8o"
+run/main_scene="uid://kmqufw53slo8"
 config/features=PackedStringArray("4.5", "Forward Plus")
 
 [dotnet]
@@ -50,4 +50,4 @@ ship_port_thrusters={
 
 [rendering]
 
-textures/canvas_textures/default_texture_filter=3
+textures/canvas_textures/default_texture_filter=2

@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://c054hp4irhql2"]
+
+[ext_resource type="Texture2D" uid="uid://dhxh21bicm5xm" path="res://assets/icons/shapes/d4_outline.png" id="1_3cxh5"]
+[ext_resource type="Script" uid="uid://bysqe15ud7rkj" path="res://source/ships/ship.gd" id="1_hkrho"]
+[ext_resource type="PackedScene" uid="uid://nt4jj7ksn06h" path="res://scenes/ships/thruster_array.tscn" id="3_jt8rb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hkrho"]
+radius = 50.24938
+
+[node name="Ship" type="RigidBody2D"]
+script = ExtResource("1_hkrho")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-7, 0)
+shape = SubResource("CircleShape2D_hkrho")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5707964
+texture = ExtResource("1_3cxh5")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.5, 0.5)
+
+[node name="ThrusterArray" parent="." instance=ExtResource("3_jt8rb")]

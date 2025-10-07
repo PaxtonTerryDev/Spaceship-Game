@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://duwrsb8bx3r0i"]
+
+[ext_resource type="PackedScene" uid="uid://c054hp4irhql2" path="res://scenes/ships/ship.tscn" id="1_36hv0"]
+[ext_resource type="Script" uid="uid://c8vjxv8ynmdqu" path="res://source/core/controllers/player_controller.gd" id="2_sn4wk"]
+
+[node name="Ship" instance=ExtResource("1_36hv0")]
+
+[node name="PlayerController" type="Node" parent="." index="3"]
+script = ExtResource("2_sn4wk")
+metadata/_custom_type_script = "uid://c8vjxv8ynmdqu"

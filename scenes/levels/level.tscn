@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://kmqufw53slo8"]
+
+[ext_resource type="PackedScene" uid="uid://duwrsb8bx3r0i" path="res://scenes/ships/player_ship.tscn" id="2_b2cq8"]
+[ext_resource type="PackedScene" uid="uid://b57id7wr7n1jn" path="res://scenes/objects/space_object.tscn" id="2_bovvr"]
+
+[node name="Level" type="Node2D"]
+
+[node name="Ship" parent="." instance=ExtResource("2_b2cq8")]
+position = Vector2(490, 61)
+
+[node name="SpaceObject" parent="." instance=ExtResource("2_bovvr")]
+position = Vector2(118, -145)
+mass = 100.0
+linear_damp = 0.0
+angular_damp = 0.0
+initial_velocity = Vector2(0, 10)
+initial_speed = 10.0
