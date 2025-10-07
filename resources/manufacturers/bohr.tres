@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="Manufacturer" load_steps=3 format=3 uid="uid://dx6dbuj4ykvix"]
-
-[ext_resource type="Script" uid="uid://4tn0lbycjjrc" path="res://source/core/resources/manufacturer.gd" id="1_lawms"]
-[ext_resource type="Texture2D" uid="uid://dcjyn3vn41r0f" path="res://assets/icons/cursors/GridSquare.png" id="1_ybr3s"]
-
-[resource]
-script = ExtResource("1_lawms")
-display_name = "Default"
-logo = ExtResource("1_ybr3s")

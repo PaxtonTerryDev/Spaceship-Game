@@ -14,6 +14,10 @@ config/name="Spaceship Game"
 run/main_scene="uid://dpod7fximr8o"
 config/features=PackedStringArray("4.5", "Forward Plus")
 
+[dotnet]
+
+project/assembly_name="Spaceship Game"
+
 [input]
 
 ship_stern_thrusters={
