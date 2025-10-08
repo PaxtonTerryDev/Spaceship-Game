@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://nt4jj7ksn06h"]
 
-[ext_resource type="Script" uid="uid://cy8hrmox0jte6" path="res://source/ships/thruster_array.gd" id="1_w2ys6"]
-[ext_resource type="Script" uid="uid://643nuj120d26" path="res://source/ships/thruster.gd" id="2_mdchu"]
+[ext_resource type="Script" uid="uid://cy8hrmox0jte6" path="res://source/ships/components/thruster_array.gd" id="1_w2ys6"]
+[ext_resource type="Script" uid="uid://643nuj120d26" path="res://source/ships/components/thruster.gd" id="2_mdchu"]
 
 [node name="ThrusterArray" type="Node"]
 script = ExtResource("1_w2ys6")

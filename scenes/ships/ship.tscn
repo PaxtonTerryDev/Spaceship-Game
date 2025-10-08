@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://c054hp4irhql2"]
+[gd_scene load_steps=6 format=3 uid="uid://c054hp4irhql2"]
 
 [ext_resource type="Texture2D" uid="uid://dhxh21bicm5xm" path="res://assets/icons/shapes/d4_outline.png" id="1_3cxh5"]
 [ext_resource type="Script" uid="uid://bysqe15ud7rkj" path="res://source/ships/ship.gd" id="1_hkrho"]
 [ext_resource type="PackedScene" uid="uid://nt4jj7ksn06h" path="res://scenes/ships/thruster_array.tscn" id="3_jt8rb"]
+[ext_resource type="Script" uid="uid://cck6452jdw518" path="res://source/ships/components/ship_movement.gd" id="4_k8gom"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hkrho"]
 radius = 50.24938
@@ -19,3 +20,7 @@ rotation = 1.5707964
 texture = ExtResource("1_3cxh5")
 
 [node name="ThrusterArray" parent="." instance=ExtResource("3_jt8rb")]
+
+[node name="ShipMovement" type="Node" parent="."]
+script = ExtResource("4_k8gom")
+metadata/_custom_type_script = "uid://cck6452jdw518"

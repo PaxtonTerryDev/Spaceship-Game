@@ -5,9 +5,9 @@
 
 [node name="Ship" instance=ExtResource("1_36hv0")]
 
-[node name="PlayerController" type="Node" parent="." index="3"]
+[node name="PlayerController" type="Node" parent="." index="4"]
 script = ExtResource("2_sn4wk")
 metadata/_custom_type_script = "uid://c8vjxv8ynmdqu"
 
-[node name="Camera2D" type="Camera2D" parent="." index="4"]
+[node name="Camera2D" type="Camera2D" parent="." index="5"]
 zoom = Vector2(0.25, 0.25)
