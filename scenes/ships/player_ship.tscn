@@ -8,3 +8,6 @@
 [node name="PlayerController" type="Node" parent="." index="3"]
 script = ExtResource("2_sn4wk")
 metadata/_custom_type_script = "uid://c8vjxv8ynmdqu"
+
+[node name="Camera2D" type="Camera2D" parent="." index="4"]
+zoom = Vector2(0.25, 0.25)

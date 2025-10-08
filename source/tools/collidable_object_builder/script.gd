@@ -21,5 +21,8 @@ func _build_resource(_name: String, _texture: Texture2D, _colliders: Array[Packe
 	obj.sprite = _texture
 	obj.collision_data = _colliders
 	var filepath = "%s%s%s" % [directory, _name, ".tres"]
+	if FileAccess.open(filepath, FileAccess.READ):
+		push_error("Resource already exists. Ensure you have renamed the resource")
+		return
 	print("Saving resource at %s" % filepath)
 	ResourceSaver.save(obj, filepath)

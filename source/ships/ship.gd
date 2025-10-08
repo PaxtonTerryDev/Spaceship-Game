@@ -7,6 +7,9 @@ enum ShipSide {
 	STARBOARD
 }
 
+@export var rotation_speed: float = 5.0
+
+var target_rotation: float = 0.0
 
 @onready var thrusters: ThrusterArray = $ThrusterArray
 
@@ -23,6 +26,17 @@ enum ShipSide {
 	ShipSide.PORT: Vector2.DOWN,
 	ShipSide.STARBOARD: Vector2.UP
 	}
+
+func _physics_process(delta: float) -> void:
+	# Gradually rotate towards target rotation
+	var angle_diff = angle_difference(rotation, target_rotation)
+	var rotation_step = rotation_speed * delta
+
+	if abs(angle_diff) < rotation_step:
+		angular_velocity = 0
+		rotation = target_rotation
+	else:
+		angular_velocity = sign(angle_diff) * rotation_speed
 
 func engage_thruster(side: ShipSide, strength: float = 1.0) -> void:
 	var vector = _rotated_ship_vector(side)

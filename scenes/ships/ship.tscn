@@ -18,7 +18,4 @@ shape = SubResource("CircleShape2D_hkrho")
 rotation = 1.5707964
 texture = ExtResource("1_3cxh5")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(0.5, 0.5)
-
 [node name="ThrusterArray" parent="." instance=ExtResource("3_jt8rb")]

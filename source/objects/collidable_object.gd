@@ -5,12 +5,21 @@ class_name CollidableObject extends Resource
 @export var collision_data: Array[PackedVector2Array]
 
 func instantiate_nodes(parent: Node) -> void:
-	var sprite_node: Sprite2D = _create_sprite()
-	var colliders: Array[CollisionPolygon2D] = _create_colliders()
+	_instantiate_sprite_node(parent)
+	_instantiate_collider_nodes(parent)
 
+func _instantiate_sprite_node(parent: Node) -> void:
+	var sprite_node: Sprite2D = _create_sprite()
 	parent.add_child(sprite_node)
+	if Engine.is_editor_hint():
+		sprite_node.owner = parent.get_tree().edited_scene_root
+
+func _instantiate_collider_nodes(parent: Node) -> void:
+	var colliders: Array[CollisionPolygon2D] = _create_colliders()
 	for collider in colliders:
 		parent.add_child(collider)
+		if Engine.is_editor_hint():
+			collider.owner = parent.get_tree().edited_scene_root
 
 func _create_sprite() -> Sprite2D:
 	var sprite_node: Sprite2D = Sprite2D.new()

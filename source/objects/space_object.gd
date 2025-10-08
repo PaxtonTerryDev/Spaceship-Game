@@ -1,14 +1,16 @@
 @tool
 class_name SpaceObject extends RigidBody2D
 
-const ROTATION_SCALE = 100
+const ROTATION_SCALE = 1000
 
 @export var collidable_object: CollidableObject:
 	set(new_res):
 		_clear_children()
-		if new_res != null:
-			new_res.instantiate_nodes(self)
-
+		if new_res == null:
+			collidable_object = null
+		else:
+			collidable_object = new_res
+			collidable_object.instantiate_nodes(self)
 
 @export_range(0.0, 100.0) var rotation_speed: float = 50:
 	set(new_speed):
