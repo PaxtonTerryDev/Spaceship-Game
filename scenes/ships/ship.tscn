@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://c054hp4irhql2"]
+[gd_scene load_steps=8 format=3 uid="uid://c054hp4irhql2"]
 
 [ext_resource type="Texture2D" uid="uid://dhxh21bicm5xm" path="res://assets/icons/shapes/d4_outline.png" id="1_3cxh5"]
 [ext_resource type="Script" uid="uid://bysqe15ud7rkj" path="res://source/ships/ship.gd" id="1_hkrho"]
 [ext_resource type="PackedScene" uid="uid://nt4jj7ksn06h" path="res://scenes/ships/thruster_array.tscn" id="3_jt8rb"]
 [ext_resource type="Script" uid="uid://cck6452jdw518" path="res://source/ships/components/ship_movement.gd" id="4_k8gom"]
+[ext_resource type="Script" uid="uid://bi0ou7326lda0" path="res://scenes/projectiles/projectile_spawner.gd" id="5_blc30"]
+[ext_resource type="PackedScene" uid="uid://dxuboywkfpb7v" path="res://scenes/projectiles/projectile.tscn" id="6_1gh00"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hkrho"]
 radius = 50.24938
@@ -24,3 +26,15 @@ texture = ExtResource("1_3cxh5")
 [node name="ShipMovement" type="Node" parent="."]
 script = ExtResource("4_k8gom")
 metadata/_custom_type_script = "uid://cck6452jdw518"
+
+[node name="ProjectileSpawnerL" type="Marker2D" parent="."]
+position = Vector2(-1, -32)
+script = ExtResource("5_blc30")
+projectile_scene = ExtResource("6_1gh00")
+metadata/_custom_type_script = "uid://bi0ou7326lda0"
+
+[node name="ProjectileSpawnerR" type="Marker2D" parent="."]
+position = Vector2(-1, 32)
+script = ExtResource("5_blc30")
+projectile_scene = ExtResource("6_1gh00")
+metadata/_custom_type_script = "uid://bi0ou7326lda0"
