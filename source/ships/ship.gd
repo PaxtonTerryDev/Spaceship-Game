@@ -7,8 +7,9 @@ enum ShipSide {
 	STARBOARD
 }
 
-@onready var movement: ShipMovement = $ShipMovement
+@onready var movement_component: ShipMovement = $ShipMovement
 @onready var thrusters: ThrusterArray = $ThrusterArray
+@onready var weapon_component: WeaponComponent = $WeaponComponent
 
 @onready var thruster_map: Dictionary[Ship.ShipSide, Thruster] = {
 	Ship.ShipSide.STERN: thrusters.stern,
@@ -23,11 +24,3 @@ enum ShipSide {
 	Ship.ShipSide.PORT: Vector2.DOWN,
 	Ship.ShipSide.STARBOARD: Vector2.UP
 	}
-
-@onready var projectile_spawner_l: ProjectileSpawner = $ProjectileSpawnerL
-@onready var projectile_spawner_r: ProjectileSpawner = $ProjectileSpawnerR
-@onready var projectile_spawners: Array[ProjectileSpawner] = [projectile_spawner_l, projectile_spawner_r]
-
-func fire_active_weapon_group() -> void:
-	for spawner in projectile_spawners:
-		spawner.spawn()

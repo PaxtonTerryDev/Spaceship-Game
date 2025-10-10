@@ -6,10 +6,9 @@ class_name ShipMovement extends MovementComponent
 
 var target_rotation: float = 0.0
 
-@onready var thrusters: ThrusterArray = $ThrusterArray
+@onready var thruster_array: ThrusterArray = $"../ThrusterArray"
 
 func _physics_process(delta: float) -> void:
-	# Gradually rotate towards target rotation
 	var angle_diff = angle_difference(ship.rotation, target_rotation)
 	var rotation_step = rotation_speed * delta
 

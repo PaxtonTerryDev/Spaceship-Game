@@ -14,6 +14,10 @@ config/name="Spaceship Game"
 run/main_scene="uid://kmqufw53slo8"
 config/features=PackedStringArray("4.5", "Forward Plus")
 
+[autoload]
+
+BulletPool="*res://source/projectiles/bullet_pool.gd"
+
 [dotnet]
 
 project/assembly_name="Spaceship Game"

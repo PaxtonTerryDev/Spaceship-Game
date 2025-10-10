@@ -1,13 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://duwrsb8bx3r0i"]
+[gd_scene load_steps=5 format=3 uid="uid://duwrsb8bx3r0i"]
 
 [ext_resource type="PackedScene" uid="uid://c054hp4irhql2" path="res://scenes/ships/ship.tscn" id="1_36hv0"]
 [ext_resource type="Script" uid="uid://c8vjxv8ynmdqu" path="res://source/core/controllers/player_controller.gd" id="2_sn4wk"]
+[ext_resource type="PackedScene" uid="uid://dxuboywkfpb7v" path="res://scenes/projectiles/projectile.tscn" id="3_4el6i"]
+[ext_resource type="Script" uid="uid://bpwtj5j85chfu" path="res://source/weapons/weapon.gd" id="3_sn4wk"]
 
 [node name="Ship" instance=ExtResource("1_36hv0")]
 
-[node name="PlayerController" type="Node" parent="." index="4"]
+[node name="Weapon" type="Node2D" parent="WeaponComponent" index="0"]
+position = Vector2(50, 0)
+script = ExtResource("3_sn4wk")
+projectile_scene = ExtResource("3_4el6i")
+metadata/_custom_type_script = "uid://bpwtj5j85chfu"
+
+[node name="PlayerController" type="Node" parent="." index="5"]
 script = ExtResource("2_sn4wk")
 metadata/_custom_type_script = "uid://c8vjxv8ynmdqu"
 
-[node name="Camera2D" type="Camera2D" parent="." index="5"]
+[node name="Camera2D" type="Camera2D" parent="." index="6"]
 zoom = Vector2(0.25, 0.25)
