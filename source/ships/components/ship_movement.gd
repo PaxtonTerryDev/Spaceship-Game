@@ -1,7 +1,13 @@
 class_name ShipMovement extends MovementComponent
 
+enum RotationType {
+	GRADUAL,
+	INSTANT
+}
+
 @onready var ship = get_parent() as Ship
 
+@export var rotation_type: RotationType = RotationType.GRADUAL
 @export var rotation_speed: float = 5.0
 
 var target_rotation: float = 0.0
@@ -10,13 +16,19 @@ var target_rotation: float = 0.0
 
 func _physics_process(delta: float) -> void:
 	var angle_diff = angle_difference(ship.rotation, target_rotation)
-	var rotation_step = rotation_speed * delta
 
-	if abs(angle_diff) < rotation_step:
-		ship.angular_velocity = 0
-		ship.rotation = target_rotation
+	if rotation_type == RotationType.INSTANT:
+		# Calculate angular velocity needed to reach target rotation in one frame
+		ship.angular_velocity = angle_diff / delta
 	else:
-		ship.angular_velocity = sign(angle_diff) * rotation_speed
+		# Gradual rotation using configurable rotation_speed
+		var rotation_step = rotation_speed * delta
+
+		if abs(angle_diff) < rotation_step:
+			ship.angular_velocity = 0
+			ship.rotation = target_rotation
+		else:
+			ship.angular_velocity = sign(angle_diff) * rotation_speed
 
 func engage_thruster(side: Ship.ShipSide, strength: float = 1.0) -> void:
 	var vector = _rotated_ship_vector(side)

@@ -9,7 +9,7 @@
 
 [node name="Level" type="Node2D"]
 
-[node name="Ship" parent="." instance=ExtResource("2_b2cq8")]
+[node name="PlayerShip" parent="." instance=ExtResource("2_b2cq8")]
 position = Vector2(490, 61)
 
 [node name="SpaceObject" parent="." instance=ExtResource("2_bovvr")]
